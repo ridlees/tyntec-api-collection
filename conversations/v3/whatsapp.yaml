@@ -2857,7 +2857,7 @@ components:
         status:
           type: string
           description: |
-            Status the localization.
+            Status of the localization.
           enum:
             - REQUESTED
             - SUBMIT_FAILED
@@ -2930,7 +2930,7 @@ components:
             IMAGE
         text:
           type: string
-          description: Text based part of format "TEXT
+          description: Text part in the case the format is TEXT
           example: Hi {{1}}!
     WhatsAppTemplateBodyComponentResponse:
       type: object
