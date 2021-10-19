@@ -2031,7 +2031,7 @@ components:
       description: |
         Interactive message type
       required:
-        - type
+        - subType
         - components
       properties:
         subType:
