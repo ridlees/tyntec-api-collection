@@ -578,8 +578,7 @@ components:
     WeChatChannelResponses:
       type: array
       items:
-        anyOf:
-          - $ref: '#/components/schemas/WeChatChannelResponse'
+        $ref: '#/components/schemas/WeChatChannelResponse'
     WeChatChannelResponse:
       type: object
       allOf:
@@ -611,8 +610,7 @@ components:
     TelegramChannelResponses:
       type: array
       items:
-        anyOf:
-            - $ref: '#/components/schemas/TelegramChannelResponse'
+        $ref: '#/components/schemas/TelegramChannelResponse'
     TelegramChannelResponse:
       type: object
       allOf:
@@ -643,8 +641,7 @@ components:
     SMSChannelResponses:
       type: array
       items:
-        anyOf:
-          - $ref: '#/components/schemas/SMSChannelResponse'
+        $ref: '#/components/schemas/SMSChannelResponse'
     SMSChannelResponse:
       type: object
       allOf:
@@ -670,8 +667,7 @@ components:
     WhatsAppChannelResponses:
       type: array
       items:
-        anyOf:
-           - $ref: '#/components/schemas/WhatsAppChannelResponse'
+        $ref: '#/components/schemas/WhatsAppChannelResponse'
     WhatsAppChannelResponse:
       type: object
       allOf:
@@ -698,8 +694,7 @@ components:
     ViberChannelResponses:
       type: array
       items:
-        anyOf:
-          - $ref: '#/components/schemas/ViberChannelResponse'
+        $ref: '#/components/schemas/ViberChannelResponse'
     ViberChannelResponse:
       type: object
       allOf:
