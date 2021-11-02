@@ -702,7 +702,7 @@ components:
           - $ref: '#/components/schemas/ViberChannelResponse'
     ViberChannelResponse:
       type: object
-      allOf:
+      allOf:  # TODO
         - $ref: '#/components/schemas/ChannelResponse'
       properties:
         id:
