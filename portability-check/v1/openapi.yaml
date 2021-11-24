@@ -170,7 +170,7 @@ components:
           type: number
           description: |
             The price for the query
-          example: "0.001"
+          example: 0.001
         currency:
           type: string
           description: |
