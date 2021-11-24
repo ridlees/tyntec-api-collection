@@ -225,7 +225,7 @@ components:
           type: boolean
           description: |
             Indicates whether the response body contains the number information (synchronous) or just the requestId of the asynchronous response.
-          example: "true"
+          example: true
     GnvResponse:
       type: object
       description: The number information response for GNV
