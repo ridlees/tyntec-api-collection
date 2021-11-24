@@ -164,7 +164,7 @@ components:
         ported:
           type: string
           description: |
-            Indication of the porting status (yes/no)
+            Indication of the porting status (true/false)
           example: "false"
         price:
           type: number
