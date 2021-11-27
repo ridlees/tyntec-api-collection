@@ -187,7 +187,7 @@ components:
               key:
                 type: string
                 description: The authentication token
-          description: If the whitelist restriction is enabled or not for this account.
+          description: The keys that are active for this account
           example: |
             [
               {
