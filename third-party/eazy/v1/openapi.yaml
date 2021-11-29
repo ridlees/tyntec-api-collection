@@ -323,7 +323,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/apiKeysResponse'
+                  $ref: '#/components/responses/apiKeyResponse'
   /keys/currrent:
     get:
       summary: Current API key
