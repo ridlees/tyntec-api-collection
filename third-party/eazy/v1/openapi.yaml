@@ -323,7 +323,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/apiKeysResponse'
+                  $ref: '#/components/schemas/apiKeysResponse'
   /keys/currrent:
     get:
       summary: Current API key
@@ -337,7 +337,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/apiKeyResponse'
+                $ref: '#/components/schemas/apiKeyResponse'
   /companies:
     get:
       summary: List all companies
@@ -443,7 +443,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/agentsResponse'
+                $ref: '#/components/schemas/agentsResponse'
   /companies/{companyId}/teams:
     post:
       summary: Create a team
@@ -472,7 +472,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/teamResponse'
+                $ref: '#/components/schemas/teamResponse'
     get:
       summary: List all teams
       tags:
@@ -495,7 +495,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/teamsResponse'
+                  $ref: '#/components/schemas/teamsResponse'
   /companies/{companyId}/teams/{jid}:
     patch:
       summary: Update a team
@@ -532,7 +532,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/teamResponse'
+                $ref: '#/components/schemas/teamResponse'
     delete:
       summary: Delete a team
       tags:
@@ -581,7 +581,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/assistantsResponse'
+                  $ref: '#/components/schemas/assistantsResponse'
   /companies/{companyId}/assistants/{jid}:
     patch:
       summary: Update an assistant
@@ -626,7 +626,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/assistantResponse'
+                $ref: '#/components/schemas/assistantResponse'
   /companies/{companyId}/labels:
     post:
       summary: Create a label
@@ -660,7 +660,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/labelResponse'
+                $ref: '#/components/schemas/labelResponse'
     get:
       summary: List all labels
       tags:
@@ -683,7 +683,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/labelResponse'
+                  $ref: '#/components/schemas/labelResponse'
   /companies/{companyId}/labels/{jid}:
     patch:
       summary: Update a label
@@ -730,7 +730,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/labelResponse'
+                $ref: '#/components/schemas/labelResponse'
     delete:
       summary: Delete a label
       tags:
@@ -785,7 +785,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/channelResponse'
+                  $ref: '#/components/schemas/channelResponse'
   /channels/{channelJid}:
     patch:
       summary: Update a channel
@@ -818,7 +818,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/channelResponse'
+                $ref: '#/components/schemas/channelResponse'
   /channels/{channelJid}/automated-messages:
     get:
       summary: List all automated messages
@@ -843,7 +843,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/autoMessagesResponse'
+                  $ref: '#/components/schemas/autoMessagesResponse'
   /channels/{channelJid}/automated-messages/{type}:
     get:
       summary: Read an automated message
@@ -873,7 +873,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/autoMessageResponse'
+                $ref: '#/components/schemas/autoMessageResponse'
     patch:
       summary: Update an automated message
       tags:
@@ -902,7 +902,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/autoMessageResponse'
+                $ref: '#/components/schemas/autoMessageResponse'
   /channels/{channelJid}/contacts:
     post:
       summary: Create a contact
@@ -949,7 +949,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/contactResponse'
+                $ref: '#/components/schemas/contactResponse'
   /channels/{channelJid}/contacts/{contactJid}:
     get:
       summary: Read a contact
@@ -980,7 +980,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/contactResponse'
+                $ref: '#/components/schemas/contactResponse'
     patch:
       summary: Update a contact
       tags:
@@ -1028,7 +1028,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/contactResponse'
+                $ref: '#/components/schemas/contactResponse'
   /channels/{channelJid}/contacts/blacklist:
     get:
       summary: List blocked contacts
@@ -1053,7 +1053,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/emailResponse'
+                  $ref: '#/components/schemas/emailResponse'
   /channels/{channelJid}/contacts/blacklist/{contactJid}:
     post:
       summary: Block a contact
@@ -1143,7 +1143,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/commentResponse'
+                $ref: '#/components/schemas/commentResponse'
   /channels/{channelJid}/conversations/{contactJid}:
     get:
       summary: Read a conversation
@@ -1174,7 +1174,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/conversationResponse'
+                $ref: '#/components/schemas/conversationResponse'
     patch:
       summary: Update a conversation
       tags:
@@ -1228,7 +1228,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/conversationResponse'
+                $ref: '#/components/schemas/conversationResponse'
   /channels/{channelJid}/lists:
     get:
       summary: List all contact lists
@@ -1253,7 +1253,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/listResponse'
+                  $ref: '#/components/schemas/listResponse'
   /channels/{channelJid}/lists/{listJid}/{contactJid}:
     post:
       summary: Add a contact to a list
@@ -1495,7 +1495,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/notesResponse'
+                  $ref: '#/components/schemas/notesResponse'
     post:
       summary: Create a note
       tags:
@@ -1537,7 +1537,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/noteResponse'
+                $ref: '#/components/schemas/noteResponse'
   /channels/{channelJid}/contacts/{contactJid}/notes/{id}:
     post:
       summary: Update a note
@@ -1601,7 +1601,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/noteResponse'
+                $ref: '#/components/schemas/noteResponse'
     delete:
       summary: Delete a note
       tags:
@@ -1657,7 +1657,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/profileResponse'
+                $ref: '#/components/schemas/profileResponse'
     post:
       summary: Overwrite your profile
       tags:
@@ -1709,7 +1709,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/profileResponse'
+                $ref: '#/components/schemas/profileResponse'
     patch:
       summary: Update your profile
       tags:
@@ -1746,7 +1746,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/profileResponse'
+                $ref: '#/components/schemas/profileResponse'
   /channels/{channelJid}/qr-codes:
     get:
       summary: List all QR codes
@@ -1771,7 +1771,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/qrCodesResponse'
+                  $ref: '#/components/schemas/qrCodesResponse'
     post:
       summary: Create a QR code
       tags:
@@ -1799,7 +1799,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/qrCodeResponse'
+                $ref: '#/components/schemas/qrCodeResponse'
   /channels/{channelJid}/qr-codes/{code}:
     patch:
       summary: Update a QR code
@@ -1836,7 +1836,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/responses/qrCodeResponse'
+                $ref: '#/components/schemas/qrCodeResponse'
     delete:
       summary: Delete a QR code
       tags:
@@ -1972,7 +1972,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/webhooksResponse'
+                  $ref: '#/components/schemas/webhooksResponse'
     post:
       summary: Create a webhook
       tags:
