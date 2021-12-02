@@ -581,7 +581,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/assistantsResponse'
+                  $ref: '#/components/responses/assistantResponse'
   /companies/{companyId}/assistants/{jid}:
     patch:
       summary: Update an assistant
