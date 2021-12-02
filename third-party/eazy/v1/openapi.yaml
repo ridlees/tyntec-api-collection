@@ -459,13 +459,20 @@ paths:
           schema:
             type: string
             example: '458e633a-ab50-445f-9d1f-52afbf720ec3'
-        - in: body
-          name: name
-          required: true
-          description: Name of the team to be created
-          schema:
-            type: string
-          example: 'Support'
+      requestBody:
+        description: The team you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  description: Name of the team to be created
+                  type: string
+                  example: Support
       responses:
         201:
           description: Created
@@ -519,13 +526,20 @@ paths:
             type: string
             format: email
             example: 'jid@company.com'
-        - in: body
-          name: name
-          required: true
-          description: Name of the team to be created
-          schema:
-            type: string
-          example: 'Support'
+      requestBody:
+        description: The team you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  description: Name of the team to be updated
+                  type: string
+                  example: Support
       responses:
         200:
           description: OK
@@ -605,21 +619,23 @@ paths:
             type: string
             format: email
             example: 'jid@company.com'
-        - in: body
-          name: color
-          description: Color
-          schema:
-            type: integer
-        - in: body
-          name: description
-          description: Description of the assistant
-          schema:
-            type: string
-        - in: body
-          name: name
-          description: Name of the assistant
-          schema:
-            type: string
+      requestBody:
+        description: The assistant you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                color:
+                  description: Color
+                  type: integer
+                description:
+                  description: Description of the assistant
+                  type: string
+                name:
+                  description: Name of the assistant
+                  type: string
       responses:
         200:
           description: OK
@@ -642,18 +658,22 @@ paths:
           schema:
             type: string
             example: '458e633a-ab50-445f-9d1f-52afbf720ec3'
-        - in: body
-          name: description
-          description: Description of the label
-          schema:
-            type: string
-          example: 'Support related questions'
-        - in: body
-          name: name
-          description: Name of the label
-          schema:
-            type: string
-          example: 'Support'
+      requestBody:
+        description: The label you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  description: Description of the label
+                  type: string
+                  example: 'Support related questions'
+                name:
+                  description: Name of the label
+                  type: string
+                  example: 'Support'
       responses:
         201:
           description: Created
@@ -707,23 +727,25 @@ paths:
             type: string
             format: email
             example: 'jid@company.com'
-        - in: body
-          name: color
-          description: Color of the label
-          schema:
-            type: integer
-          example: 8
-        - in: body
-          name: name
-          description: Friendly name of the label
-          schema:
-            type: string
-          example: 'Customer support'
-        - in: body
-          name: priority
-          description: Priority of the label
-          schema:
-            type: integer
+      requestBody:
+        description: The label you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                color:
+                  description: Color of the label
+                  type: integer
+                  example: 8
+                name:
+                  description: Friendly name of the label
+                  type: string
+                  example: 'Customer support'
+                priority:
+                  description: Priority of the label
+                  type: integer
       responses:
         200:
           description: OK
@@ -802,16 +824,20 @@ paths:
             type: string
             format: email
             example: 'jid@company.com'
-        - in: body
-          name: name
-          description: Name of the channel
-          schema:
-            type: integer
-        - in: body
-          name: priority
-          description: Priority of the channel
-          schema:
-            type: integer
+      requestBody:
+        description: The channel you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  description: Name of the channel
+                  type: integer
+                priority:
+                  description: Priority of the channel
+                  type: integer
       responses:
         200:
           description: OK
@@ -919,30 +945,30 @@ paths:
             type: string
             format: email
             example: 'channelJid@company.com'
-        - in: body
-          name: jid
-          description: Contact ID
-          schema:
-            type: string
-          example: '31611111111@company.com'
-        - in: body
-          name: name
-          description: Name of the contact
-          schema:
-            type: string
-          example: 'John Doe'
-        - in: body
-          name: reference
-          description: Reference of the contact
-          schema:
-            type: string
-          example: 'Customer #545'
-        - in: body
-          name: remarks
-          description: Comment for the contact
-          schema:
-            type: string
-          example: 'VIP'
+      requestBody:
+        description: The contact you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jid:
+                  description: Contact ID
+                  type: string
+                  example: '31611111111@company.com'
+                name:
+                  description: Name of the contact
+                  type: string
+                  example: 'John Doe'
+                reference:
+                  description: Reference of the contact
+                  type: string
+                  example: 'Customer #545'
+                remarks:
+                  description: Comment for the contact
+                  type: string
+                  example: 'VIP'
       responses:
         201:
           description: Created
@@ -1004,24 +1030,26 @@ paths:
             type: string
             format: email
             example: 'contactJid@company.com'
-        - in: body
-          name: name
-          description: Name of the contact
-          schema:
-            type: string
-          example: 'John Doe'
-        - in: body
-          name: reference
-          description: Reference of the contact
-          schema:
-            type: string
-          example: 'Customer #545'
-        - in: body
-          name: remarks
-          description: Comment for the contact
-          schema:
-            type: string
-          example: 'VIP'
+      requestBody:
+        description: The contact you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  description: Name of the contact
+                  type: string
+                  example: 'John Doe'
+                reference:
+                  description: Reference of the contact
+                  type: string
+                  example: 'Customer #545'
+                remarks:
+                  description: Comment for the contact
+                  type: string
+                  example: 'VIP'
       responses:
         200:
           description: OK
@@ -1131,12 +1159,18 @@ paths:
             type: string
             format: email
             example: 'contactJid@company.com'
-        - in: body
-          name: body
-          description: Text for the comment
-          schema:
-            type: string
-          example: 'Order #12345 has been delivered'
+      requestBody:
+        description: The comment you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  description: Text for the comment
+                  type: string
+                  example: 'Order #12345 has been delivered'
       responses:
         201:
           description: Created
@@ -1198,30 +1232,30 @@ paths:
             type: string
             format: email
             example: 'contactJid@company.com'
-        - in: body
-          name: assignee
-          description: Assistant to the agents
-          schema:
-            type: string
-          example: 'john@mycompany.com'
-        - in: body
-          name: label
-          description: Labels of the conversation
-          schema:
-            type: string
-          example: 'Label123'
-        - in: body
-          name: status
-          description: Status of the conversation
-          schema:
-            type: string
-          example: 'CLOSED'
-        - in: body
-          name: unreadCount
-          description: Number of unread messages
-          schema:
-            type: integer
-          example: 5
+      requestBody:
+        description: The conversation you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                assignee:
+                  description: Assistant to the agents
+                  type: string
+                  example: 'john@mycompany.com'
+                label:
+                  description: Labels of the conversation
+                  type: string
+                  example: 'Label123'
+                status:
+                  description: Status of the conversation
+                  type: string
+                  example: 'CLOSED'
+                unreadCount:
+                  description: Number of unread messages
+                  type: integer
+                  example: 5
       responses:
         200:
           description: OK
@@ -1435,12 +1469,18 @@ paths:
             type: string
             format: email
             example: 'contactJid@company.com'
-        - in: body
-          name: message
-          description: Color of the label
-          schema:
-            type: integer
-          example: 8
+      requestBody:
+        description: The message you would like to send
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  description: Color of the label
+                  type: integer
+                  example: 8
       responses:
         202:
           description: Accepted
@@ -1519,18 +1559,22 @@ paths:
             type: string
             format: email
             example: 'contactJid@company.com'
-        - in: body
-          name: body
-          description: Text/Body of the note.
-          schema:
-            type: string
-          example: 'Customer number #63553'
-        - in: body
-          name: referenceId
-          description: Friendly reference name as an ID.
-          schema:
-            type: string
-          example: 'CUSTOMER_NUMBER'
+      requestBody:
+        description: The note you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  description: Text/Body of the note.
+                  type: string
+                  example: 'Customer number #63553'
+                referenceId:
+                  description: Friendly reference name as an ID.
+                  type: string
+                  example: 'CUSTOMER_NUMBER'
       responses:
         201:
           description: Created
@@ -1571,30 +1615,30 @@ paths:
           schema:
             type: string
             example: '458e633a-ab50-445f-9d1f-52afbf720ec3'
-        - in: body
-          name: body
-          description: Text/Body of the note.
-          schema:
-            type: string
-          example: 'Customer number #63553'
-        - in: body
-          name: isPinnel
-          description: Is this note pinned?
-          schema:
-            type: boolean
-          example: true
-        - in: body
-          name: isReadOnly
-          description: Is this note read only or not?
-          schema:
-            type: boolean
-          example: false
-        - in: body
-          name: referenceId
-          description: Friendly reference name as an ID.
-          schema:
-            type: string
-          example: 'CUSTOMER_NUMBER'
+      requestBody:
+        description: The note you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  description: Text/Body of the note.
+                  type: string
+                  example: 'Customer number #63553'
+                isPinnel:
+                  description: Is this note pinned?
+                  type: boolean
+                  example: true
+                isReadOnly:
+                  description: Is this note read only or not?
+                  type: boolean
+                  example: false
+                referenceId:
+                  description: Friendly reference name as an ID.
+                  type: string
+                  example: 'CUSTOMER_NUMBER'
       responses:
         201:
           description: Created
@@ -1673,36 +1717,40 @@ paths:
             type: string
             format: email
             example: 'channelJid@company.com'
-        - in: body
-          name: about
-          description: Description of what is this profile about.
-          schema:
-            type: string
-          example: 'Welcome! We are here to help you 24/7'
-        - in: body
-          name: businessProfile
-          description: WhatsApp for Business profile
-          schema:
-            type: object
-            properties:
-              address:
-                description: Address associated with the profile
-                type: string
-                example: "High Street 15, New York"
-              description:
-                description: Description of the profile
-                type: string
-                example: "YourCompany Ltd."
-              email:
-                description: email address associated with the WhatsApp for business profile
-                type: string
-                format: email
-                example: "info@your-company.com"
-              vertical:
-                type: string
-                example:
-              websites:
-                $ref: '#/components/schemas/websites'
+      requestBody:
+        description: The profile you would like to overwrite
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                about:
+                  description: Description of what is this profile about.
+                  type: string
+                  example: 'Welcome! We are here to help you 24/7'
+                businessProfile:
+                  description: WhatsApp for Business profile
+                  type: object
+                  properties:
+                    address:
+                      description: Address associated with the profile
+                      type: string
+                      example: "High Street 15, New York"
+                    description:
+                      description: Description of the profile
+                      type: string
+                      example: "YourCompany Ltd."
+                    email:
+                      description: email address associated with the WhatsApp for business profile
+                      type: string
+                      format: email
+                      example: "info@your-company.com"
+                    vertical:
+                      type: string
+                      example:
+                    websites:
+                      $ref: '#/components/schemas/websites'
       responses:
         200:
           description: OK
@@ -1725,21 +1773,27 @@ paths:
             type: string
             format: email
             example: 'channelJid@company.com'
-        - in: body
-          name: businessProfile
-          description: Example of WhatsApp for Business profile update
-          schema:
-            type: object
-            properties:
-              description:
-                description: Description of the profile
-                type: string
-                example: "YourCompany Ltd."
-              email:
-                description: email address associated with the WhatsApp for business profile
-                type: string
-                format: email
-                example: "info@your-company.com"
+      requestBody:
+        description: The profile you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                businessProfile:
+                  description: Example of WhatsApp for Business profile update
+                  type: object
+                  properties:
+                    description:
+                      description: Description of the profile
+                      type: string
+                      example: "YourCompany Ltd."
+                    email:
+                      description: email address associated with the WhatsApp for business profile
+                      type: string
+                      format: email
+                      example: "info@your-company.com"
       responses:
         200:
           description: OK
@@ -1787,12 +1841,18 @@ paths:
             type: string
             format: email
             example: 'channelJid@company.com'
-        - in: body
-          name: message
-          description: Text/Body of the message.
-          schema:
-            type: string
-          example: 'I have a question about product ABC'
+      requestBody:
+        description: The QR code you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  description: Text/Body of the message.
+                  type: string
+                  example: 'I have a question about product ABC'
       responses:
         201:
           description: Created
@@ -1823,13 +1883,20 @@ paths:
           schema:
             type: string
             example: 'VETO8Y3SYCSFH1'
-        - in: body
-          name: message
-          required: true
-          description: Text/Body of the message.
-          schema:
-            type: string
-          example: 'I have a question about product ABC'
+      requestBody:
+        description: The QR code you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  description: Text/Body of the message.
+                  type: string
+                  example: 'I have a question about product ABC'
       responses:
         200:
           description: OK
@@ -1896,28 +1963,33 @@ paths:
             type: string
             format: email
             example: 'channelJid@company.com'
-        - in: body
-          name: category
-          required: true
-          description: Category text
-          schema:
-            type: string
-          example: 'ISSUE_RESOLUTION'
-        - $ref: '#/components/parameters/components'
-        - in: body
-          name: language
-          required: true
-          description: Language to be used in the template
-          schema:
-            type: string
-          example: 'en'
-        - in: body
-          name: name
-          required: true
-          description: Name of the template
-          schema:
-            type: string
-          example: 'support_after_24hours'
+      requestBody:
+        description: The template you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - category
+                - language
+                - name
+              properties:
+                category:
+                  description: Category text
+                  type: string
+                  example: 'ISSUE_RESOLUTION'
+                components:
+                  description: Array of components to be used in the template
+                  type: string
+                language:
+                  description: Language to be used in the template
+                  type: string
+                  example: 'en'
+                name:
+                  description: Name of the template
+                  type: string
+                  example: 'support_after_24hours'
       responses:
         201:
           description: Created - Check response in example above
@@ -1988,25 +2060,30 @@ paths:
             type: string
             format: email
             example: 'channelJid@company.com'
-        - in: body
-          name: events
-          required: true
-          description: Events described above
-          schema:
-            type: object
-            properties:
-              message:
-                description: Message event example
-                type: string
-                example: "message"
-        - in: body
-          name: url
-          required: true
-          description: URL of the webhook
-          schema:
-            type: string
-            format: uri
-          example: 'https://your.company.com/webhook'
+      requestBody:
+        description: The webhook you would like to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - events
+                - url
+              properties:
+                events:
+                  description: Events described above
+                  type: object
+                  properties:
+                    message:
+                      description: Message event example
+                      type: string
+                      example: "message"
+                url:
+                  description: URL of the webhook
+                  type: string
+                  format: uri
+                  example: 'https://your.company.com/webhook'
       responses:
         201:
           description: Created
@@ -2037,13 +2114,20 @@ paths:
           schema:
             type: string
             example: '458e633a-ab50-445f-9d1f-52afbf720ec3'
-        - in: body
-          name: name
-          required: true
-          description: Name of the webhook to be created
-          schema:
-            type: string
-          example: 'Support'
+      requestBody:
+        description: The webhook you would like to update
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  description: Name of the webhook to be created
+                  type: string
+                  example: 'Support'
       responses:
         200:
           description: OK
@@ -2676,12 +2760,6 @@ components:
           minimum: 0
           example: 100
   parameters:
-    components:
-      name: components
-      in: body
-      description: Array of components to be used in the template
-      schema:
-        type: string
     text:
       name: text
       in: body
