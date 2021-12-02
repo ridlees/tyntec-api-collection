@@ -495,7 +495,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/teamsResponse'
+                  $ref: '#/components/responses/teamResponse'
   /companies/{companyId}/teams/{jid}:
     patch:
       summary: Update a team
