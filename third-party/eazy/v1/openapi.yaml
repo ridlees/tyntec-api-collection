@@ -1495,7 +1495,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/notesResponse'
+                  $ref: '#/components/responses/noteResponse'
     post:
       summary: Create a note
       tags:
