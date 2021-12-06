@@ -1702,7 +1702,9 @@ paths:
                 type: string
                 example:
               websites:
-                $ref: '#/components/schemas/websites'
+                type: array
+                items:
+                  $ref: '#/components/schemas/website'
       responses:
         200:
           description: OK
