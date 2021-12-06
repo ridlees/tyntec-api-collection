@@ -2681,7 +2681,7 @@ components:
       in: body
       description: Array of components to be used in the template
       schema:
-        type: string
+        type: array
     text:
       name: text
       in: body
