@@ -2333,6 +2333,8 @@ components:
           description: Type of the contact
           type: string
           example: 'INDIVIDUAL'
+    note:
+      description: TODO
     conversationResponse:
       description: Conversation response
       type: object
