@@ -1578,7 +1578,7 @@ paths:
             type: string
           example: 'Customer number #63553'
         - in: body
-          name: isPinnel
+          name: isPinned
           description: Is this note pinned?
           schema:
             type: boolean
