@@ -2576,8 +2576,8 @@ components:
         headers:
           description: Header parameters
           type: object
-          items:
-            example: "'Authorization': 'Bearer SomeApiKey'"
+          example:
+            Authorization: 'Bearer SomeApiKey'
         id:
           description: ID of the event
           type: string
