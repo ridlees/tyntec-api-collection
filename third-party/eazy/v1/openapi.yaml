@@ -843,7 +843,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/autoMessagesResponse'
+                  $ref: '#/components/responses/autoMessageResponse'
   /channels/{channelJid}/automated-messages/{type}:
     get:
       summary: Read an automated message
