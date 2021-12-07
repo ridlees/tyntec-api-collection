@@ -1437,10 +1437,12 @@ paths:
             example: 'contactJid@company.com'
         - in: body
           name: message
-          description: Color of the label
+          description: The message to be sent
           schema:
-            type: integer
-          example: 8
+            type: object
+          example:
+            body: Hello world
+            type: text
       responses:
         202:
           description: Accepted
