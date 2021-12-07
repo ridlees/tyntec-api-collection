@@ -1451,7 +1451,7 @@ paths:
                 properties:
                   id:
                     description: The returned id can be used to match delivery [receipts](https://api.eazy.im/v3/#webhooks-overview) to the original message.
-                    type: integer
+                    type: string
                     example: "b48eaa2fab1e942cad8b8717ec6bf3ed2dad05a"
   /incoming:
     post:
