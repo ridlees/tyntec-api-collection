@@ -1972,7 +1972,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/responses/webhooksResponse'
+                  $ref: '#/components/responses/webhookResponse'
     post:
       summary: Create a webhook
       tags:
