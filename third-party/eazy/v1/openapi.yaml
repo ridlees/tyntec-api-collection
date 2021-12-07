@@ -1993,12 +1993,10 @@ paths:
           required: true
           description: Events described above
           schema:
-            type: object
-            properties:
-              message:
-                description: Message event example
-                type: string
-                example: "message"
+            type: array
+            items:
+              type: string
+              example: "message"
         - in: body
           name: url
           required: true
