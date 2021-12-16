@@ -1464,4 +1464,4 @@ components:
         ttid:
           type: string
           description: The tyntec operator's ID
-          example: 77292
+          example: "77292"
