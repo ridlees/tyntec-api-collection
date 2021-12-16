@@ -1035,7 +1035,7 @@ components:
           description: "The received message as a UTF-8 encoded string. Note: Missing parts of a concat message will be marked with <...> in the message."
           example: "This is an example, the data is garbage."
         originMCC:
-          type: string
+          type: number
           description: Representative MCC (Mobile Country Code) of the originating network
           example: 260
         originMNC:
