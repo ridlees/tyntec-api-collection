@@ -436,11 +436,6 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/PhoneProvisioningArrayResponse"
-            "*/*":
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/PhoneProvisioningArrayResponse"
         "401":
           description: Unauthorized
         "403":
@@ -451,9 +446,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
   "/byon/phonebook/v1/numbers/{phoneNumber}":
@@ -479,11 +471,6 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/PhoneProvisioningArrayResponse"
-            "*/*":
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/PhoneProvisioningArrayResponse"
         "401":
           description: Unauthorized
         "403":
@@ -494,9 +481,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
   /byon/contacts/v1:
@@ -525,11 +509,6 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/ContactArrayResponse"
-            "*/*":
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/ContactArrayResponse"
         "204":
           description: Empty list; no contacts were found for this friendly name.
         "401":
@@ -542,9 +521,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
     post:
@@ -562,18 +538,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ContactEntity"
-            "*/*":
-              schema:
-                $ref: "#/components/schemas/ContactEntity"
         "201":
           description: Created
         "202":
           description: The contact was created.
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ContactEntity"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ContactEntity"
         "400":
@@ -588,9 +558,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
   "/byon/contacts/v1/{contactId}":
@@ -614,9 +581,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ContactEntity"
-            "*/*":
-              schema:
-                $ref: "#/components/schemas/ContactEntity"
         "401":
           description: Unauthorized
         "403":
@@ -627,9 +591,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
     post:
@@ -654,9 +615,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ContactEntity"
-            "*/*":
-              schema:
-                $ref: "#/components/schemas/ContactEntity"
         "201":
           description: Created
         "400":
@@ -671,9 +629,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
     delete:
@@ -696,9 +651,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ContactEntity"
-            "*/*":
-              schema:
-                $ref: "#/components/schemas/ContactEntity"
         "204":
           description: No Content
         "400":
@@ -713,9 +665,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
   /byon/provisioning/v1:
@@ -749,19 +698,9 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/PhoneProvisioningArrayResponse"
-            "*/*":
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/PhoneProvisioningArrayResponse"
         "204":
           description: Empty list; no phone provisioning requests were found.
           content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/PhoneProvisioningArrayResponse"
             "*/*":
               schema:
                 type: array
@@ -777,9 +716,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
     post:
@@ -821,17 +757,11 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PhoneProvisioningEntity"
-            "*/*":
-              schema:
-                $ref: "#/components/schemas/PhoneProvisioningEntity"
         "201":
           description: Created
         "204":
           description: Empty list; no applications were found for your account.
           content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PhoneProvisioningEntity"
             "*/*":
               schema:
                 $ref: "#/components/schemas/PhoneProvisioningEntity"
@@ -847,9 +777,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
   "/byon/provisioning/v1/{requestId}":
@@ -875,9 +802,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PhoneProvisioningEntity"
-            "*/*":
-              schema:
-                $ref: "#/components/schemas/PhoneProvisioningEntity"
         "400":
           description: Your request was not valid.
         "401":
@@ -890,9 +814,6 @@ paths:
           description: Something went wrong. :-(
           content:
             application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-            "*/*":
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
   '/messaging/v1/conversion':
