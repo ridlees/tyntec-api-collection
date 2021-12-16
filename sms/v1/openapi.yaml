@@ -919,7 +919,7 @@ components:
   requestBodies:
     ContactEntity:
       content:
-        application/json:
+        text/csv:
           schema:
             $ref: "#/components/schemas/ContactEntity"
       description: |
