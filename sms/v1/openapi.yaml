@@ -1383,9 +1383,9 @@ components:
           type: string
           description: The identification number of the specific message part
         price:
-          type: string
+          type: number
           description: The price per message from the respective network; negative prices represent payouts in favor of a tyntec’s customer.
-          example: "0.005"
+          example: 0.005
         priceEffective:
           type: string
           description: The date when the “price” became effective
